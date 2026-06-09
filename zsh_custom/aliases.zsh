@@ -14,3 +14,8 @@ alias hgrep='history -fd 0 | grep'
 
 # Important files
 alias zshrc="vim ~/.zshrc"
+
+# Git
+alias stash="git stash"
+alias pstash="git stash pop"
+

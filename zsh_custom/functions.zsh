@@ -36,3 +36,16 @@ function git-relocate() {
     git rebase --onto "$new_parent" "$old_parent" "$branch"
 }
 
+
+function gitpushorigin() {
+  if [ "$#" -ne 1 ]; then
+    echo "Erorr: Missing arguments."
+    echo "Usage: gitpushorigin <branch>"
+    echo "Example: gitpushorigin branch-123"
+  fi
+
+  local branch=$1
+
+  echo "Pushing to origin $branch"
+  git push origin "$branch"
+}
