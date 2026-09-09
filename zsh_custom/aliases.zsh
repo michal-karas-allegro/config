@@ -18,4 +18,7 @@ alias zshrc="vim ~/.zshrc"
 # Git
 alias stash="git stash"
 alias pstash="git stash pop"
-
+alias gwa='git worktree add'
+alias gwls='git worktree list'
+alias gwrm='git worktree remove'
+alias gwpr='git worktree prune'

@@ -49,3 +49,27 @@ function gitpushorigin() {
   echo "Pushing to origin $branch"
   git push origin "$branch"
 }
+
+function gwrmf() {
+  local target
+  target=$(git worktree list | fzf | awk '{print $1}')
+  if [[ -n "$target" ]]; then
+    git worktree remove "$target"
+  fi
+}
+
+function gwan() {
+  local branch=$1
+  local base=${2:-main}
+  local dir_name=$(echo "$branch" | tr '/' '-')
+
+  git worktree add -b "$branch" "../.worktrees/$dir_name" "$base" && cd "../.worktrees/$dir_name"
+}
+
+function fenv() {
+  local env_var
+  env_var=$(printenv | fzf --header="Type to filter env vars...")
+  if [[ -n "$env_var" ]]; then
+    echo "$env_var"
+  fi
+}
