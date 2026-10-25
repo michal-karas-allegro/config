@@ -3,10 +3,12 @@
 -- Add any additional options here
 local opt = vim.opt
 
+opt.guifont = "JetBrainsMono Nerd Font:h12"
+opt.number = true
 opt.expandtab = true
 opt.shiftwidth = 2
 opt.smartindent = true
 opt.tabstop = 2
 opt.softtabstop = 2
-opt.guicursor = "n-v-c-i:block"
+opt.guicursor = "a:block"
 opt.list = false
