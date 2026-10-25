@@ -1,0 +1,8 @@
+font-size = 24
+theme = GruvBox Material Dark
+font-family = JetBrainsMono Nerd Font
+
+shell-integration-features = no-cursor
+cursor-style = block
+cursor-style-blink = false
+
